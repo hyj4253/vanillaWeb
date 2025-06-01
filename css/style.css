@@ -1,0 +1,154 @@
+  /* Google Fonts 사용 (선택사항) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+  min-height: 100vh;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#clock {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(172,182,229,0.2);
+}
+
+#login-form,
+#todo-form,
+#greeting,
+#quote,
+#weather {
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+  padding: 24px 32px;
+  margin: 18px 0;
+  width: 350px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-form input,
+#todo-form input {
+  width: 80%;
+  padding: 10px 14px;
+  border: 1px solid #b2bec3;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#login-form input:focus,
+#todo-form input:focus {
+  border-color: #74ebd5;
+}
+
+button {
+  background: linear-gradient(90deg, #74ebd5 0%, #ACB6E5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ACB6E5 0%, #74ebd5 100%);
+}
+
+#greeting {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #636e72;
+  margin: 18px 0;
+  text-align: center;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 350px;
+  max-width: 90vw;
+}
+
+#todo-list li {
+  background: rgba(236,240,241,0.8);
+  margin: 8px 0;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+}
+
+#todo-list li button {
+  background: #b2bec3;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-left: 12px;
+}
+
+#todo-list li button:hover {
+  background: #636e72;
+}
+
+#quote {
+  font-style: italic;
+  color: #636e72;
+  font-size: 1.1rem;
+  text-align: center;
+  min-height: 48px;
+}
+
+#quote span:first-child {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #0984e3;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 반응형 */
+@media (max-width: 500px) {
+  #login-form, #todo-form, #greeting, #quote, #weather, #todo-list {
+    width: 95vw;
+    padding: 16px 8px;
+  }
+  #clock {
+    font-size: 2rem;
+  }
+}
